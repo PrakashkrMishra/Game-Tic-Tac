@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TIC TAC</title>
+</head>
+<style>
+     header {
+            width: 100%;
+            background-color: #333; /* Dark background for contrast */
+            color: white; /* Light text for visibility */
+            text-align: center;
+            padding: 10px 0;
+            font-size: 18px;
+            font-weight: bold;
+            position: fixed;
+            top: 0;
+            left: 0;
+        }
+
+    
+    body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #4b4b74; 
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+
+        /* Container for the game */
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* Game grid styling */
+        .grid {
+            background-color: #4b4b74;
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .row {
+            display: flex;
+            gap: 5px;
+        }
+
+        .col {
+            height: 80px;
+            width: 80px;
+            border: 2px solid #ddd;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 32px;
+            font-weight: bold;
+            cursor: pointer;
+            background-color: white;
+            transition: background-color 0.2s, transform 0.2s;
+        }
+
+        /* Hover effects for cells */
+        .col:hover {
+            background-color: #f0f8ff;
+            transform: scale(1.1);
+        }
+
+        /* When a cell is filled */
+        .col.filled {
+            cursor: not-allowed;
+            background-color: #e6e6e6;
+        }
+
+        /* Title styling */
+        .title {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            color: #333;
+        }
+</style>
+<body>
+    <header>
+        <h2>Created By Prakash Kumar Mishra</h2>
+    </header>
+       
+    <div class="container">
+        <div class="grid">
+            <div class="row">
+                <div onclick="handleClick(this)" id="0" class="col"></div>
+                <div onclick="handleClick(this)" id="1" class="col"></div>
+                <div onclick="handleClick(this)" id="2" class="col"></div>
+            </div>
+            <div class="row">
+                <div onclick="handleClick(this)" id="3" class="col"></div>
+                <div onclick="handleClick(this)" id="4" class="col"></div>
+                <div onclick="handleClick(this)" id="5" class="col"></div>
+            </div>
+            <div class="row">
+                <div onclick="handleClick(this)" id="6" class="col"></div>
+                <div onclick="handleClick(this)" id="7" class="col"></div>
+                <div onclick="handleClick(this)" id="8" class="col"></div>
+            </div>
+
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
